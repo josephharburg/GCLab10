@@ -15,29 +15,25 @@ namespace Lab10
         {
             bool repeat = true;
             double test = 0;
+            string error = "Please enter a number!";
             while (repeat)
             {
                 try
                 {
                     test = double.Parse(Console.ReadLine());
                     repeat = false;
-                    
                 }
                 catch (ArgumentNullException)
                 {
-                    Console.WriteLine("Please enter a number!");
-                    repeat = true;
-
+                    Console.WriteLine(error);
                 }
                 catch (NullReferenceException)
                 {
-                    Console.WriteLine("Please enter a number!");
-                    repeat = true;
+                    Console.WriteLine(error);
                 }
                 catch (Exception)
                 {
-                    Console.WriteLine("Please enter a number!");
-                    repeat = true;
+                    Console.WriteLine(error);
                 }
             }
             return test;
@@ -53,7 +49,6 @@ namespace Lab10
                 if (string.IsNullOrEmpty(reply))
                 {
                     Console.WriteLine("Not a valid response");
-                    repeater = true;
                 }
                 else if (reply.ToLower() == "y" || reply.ToLower() == "yes")
                 {

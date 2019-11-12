@@ -29,7 +29,8 @@ namespace Lab10
            return FormatNumber(circumference);
         }
 
-        public double CalculateArea()        {
+        public double CalculateArea()
+        {
             double Radius = GetRadius();
             this.area = Math.PI * (Radius * Radius);
             return area;
@@ -44,10 +45,13 @@ namespace Lab10
         {
             formattedNumber = Math.Round(x, 2).ToString();
             return formattedNumber;
-        }        public double GetRadius()
+        }
+
+        public double GetRadius()
         {
             return this.radius;
-        }
+        }
+
        
 
     }

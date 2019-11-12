@@ -10,10 +10,10 @@ namespace Lab10
             //circumference and area.
             bool repeat = true;
             int num = 0;
-            Console.WriteLine("Welcome to the Circumference Calculator!\n");
+            Console.WriteLine("Welcome to the Circumference Calculator!\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
             while (repeat)
             {
-                    Console.WriteLine("Please enter a radius: ");
+                    Console.WriteLine("Please enter a radius:");
                     double radius = Validator.ValidateNumber();
                     Circle circle = new Circle(radius);
                     Console.WriteLine($"Circumference: {circle.CalculateFormattedCircumference()}\nArea: {circle.CalculateFormattedArea()}");
@@ -22,11 +22,11 @@ namespace Lab10
             }
             if (num > 1)
             {
-                Console.WriteLine($"GoodBye!\nYou created {num} cirlces!");
+                Console.WriteLine($"You created {num} cirlces.\nGoodbye!");
             }
             else
             {
-                Console.WriteLine($"GoodBye!\nYou created {num} cirlce!");
+                Console.WriteLine($"You created 1 circle.\nGoodbye!");
             }
         }
     
